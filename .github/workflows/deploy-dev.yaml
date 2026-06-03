@@ -217,6 +217,7 @@ jobs:
         env:
           SEED_GLOBAL_DOMAINS: ${{ vars.SEED_GLOBAL_DOMAINS || 'true' }}
           GLOBAL_DOMAINS_URL_DEV: ${{ vars.GLOBAL_DOMAINS_URL_DEV }}
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
         run: |
           set -euo pipefail
           if [ "${SEED_GLOBAL_DOMAINS}" = "false" ]; then
